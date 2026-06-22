@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Example Essay - Denmark Wind And Carbon Intensity</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #172026;
+  --muted: #52606d;
+  --line: #d7dde3;
+  --soft: #f5f7f9;
+  --code: #101820;
+  --accent: #0f6d7a;
+  --teacher: #7a4b00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 28px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.topbar a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.page {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.notebook-title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.generated {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cell {
+  padding: 18px 0;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.cell:first-of-type {
+  padding-top: 8px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  line-height: 1.2;
+}
+
+.markdown h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.markdown h2 {
+  margin: 8px 0 10px;
+  font-size: 23px;
+}
+
+.markdown h3 {
+  margin: 12px 0 8px;
+  font-size: 18px;
+}
+
+.markdown p {
+  margin: 9px 0;
+}
+
+.markdown ul,
+.markdown ol {
+  margin: 8px 0 8px 22px;
+  padding: 0;
+}
+
+.markdown li {
+  margin: 4px 0;
+}
+
+.markdown code {
+  padding: 2px 5px;
+  border: 1px solid #dce3e8;
+  border-radius: 4px;
+  background: #f7f9fa;
+  color: #102a43;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92em;
+}
+
+.markdown a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.code-cell {
+  margin: 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  border: 1px solid #cfd8df;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: var(--code);
+  color: #eff6ff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.output-cell {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  border: 1px solid #d7dde3;
+  border-radius: 6px;
+  background: #f8fafb;
+  color: #172026;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.svg-output {
+  margin: 14px 0 0;
+  overflow-x: auto;
+}
+
+.svg-output svg {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 15px;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--soft);
+}
+
+.teacher-note .notebook-title {
+  color: var(--teacher);
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.index-card {
+  display: block;
+  min-height: 96px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  background: #fff;
+}
+
+.index-card strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+.index-card span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.index-section {
+  margin-top: 32px;
+}
+
+.index-section h2 {
+  margin-bottom: 4px;
+  font-size: 22px;
+}
+
+.index-section p {
+  margin-top: 0;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <a href="index.html">Notebook previews</a>
+    <span>Example Essay - Denmark Wind And Carbon Intensity</span>
+  </nav>
+  <main class="page">
+    <p class="notebook-title">Example Essay - Denmark Wind And Carbon Intensity</p>
+    <p class="generated">Generated 2026-06-22 10:03 from FYS10XX_computational_essay_example_denmark_wind.ipynb</p>
+    <section class="cell markdown"><h1>Computational essay draft</h1>
+<h2>Denmark: did more wind power show up as cleaner electricity?</h2>
+<p>I wanted this essay to feel like a realistic first computational essay, not a huge research project. I chose one country, one time period, one public dataset and one main figure. The goal is to make a clear argument with numbers, while also being honest about what the data cannot prove.</p></section><section class="cell markdown"><h2>Focused question</h2>
+<p>Between 2010 and 2024, how did Denmark&#x27;s wind share of electricity generation and electricity carbon intensity change?</p>
+<p>I chose Denmark because the change is large enough to see in a short notebook. At the same time, the answer is not automatic. More wind should help, but the carbon intensity of a grid also depends on demand, imports, fossil generation, policy and other renewable sources.</p></section><section class="cell markdown"><h2>System boundary and quantities</h2>
+<p><strong>System:</strong> Denmark&#x27;s national electricity system.</p>
+<p><strong>Period:</strong> annual data from 2010 to 2024.</p>
+<p><strong>Main quantities:</strong></p>
+<ul>
+<li>wind share of electricity generation, in percent;</li>
+<li>solar share of electricity generation, in percent;</li>
+<li>renewable share of electricity generation, in percent;</li>
+<li>electricity carbon intensity, in gCO2/kWh;</li>
+<li>electricity demand, in TWh.</li>
+</ul>
+<p>My boundary is intentionally narrow: national annual averages only. I do not model hourly balancing, imports or exports. That makes the essay manageable, but it also means the conclusion has to be careful.</p></section><section class="cell markdown"><h2>Data source</h2>
+<p>This notebook reads the local course files so the calculation is stable and reproducible:</p>
+<ul>
+<li><code>data/FYS10XX_energy_data_2010_2024.csv</code></li>
+<li><code>data/FYS10XX_energy_data_dictionary.csv</code></li>
+</ul>
+<p>The actual source chain is:</p>
+<ul>
+<li><strong>Topic and citation page:</strong> <a href="https://ourworldindata.org/energy">Our World in Data - Energy</a></li>
+<li><strong>Complete dataset repository:</strong> <a href="https://github.com/owid/energy-data">owid/energy-data on GitHub</a></li>
+<li><strong>Original full CSV download:</strong> <a href="https://owid-public.owid.io/data/energy/owid-energy-data.csv">OWID Energy CSV</a></li>
+<li><strong>Original codebook:</strong> <a href="https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-codebook.csv">OWID Energy codebook CSV</a></li>
+<li><strong>Main underlying source for the electricity variables used here:</strong> <a href="https://ember-energy.org/data/yearly-electricity-data/">Ember Yearly Electricity Data</a></li>
+</ul>
+<p>The local course CSV is a selected teaching subset: eight countries, years 2010-2024, and documented electricity variables. According to the course data README, the values were selected and reordered but not numerically changed.</p>
+<p>I use the column dictionary before trusting the column names, because <code>wind_share_elec</code> and <code>carbon_intensity_elec</code> are not self-explanatory unless their units are known. The important source habit here is to cite the original data provider and the underlying source, not only the local CSV file.</p>
+<p>Source: Our World in Data Energy Data (https://ourworldindata.org/energy), with the electricity variables used here based mainly on Ember Yearly Electricity Data (https://ember-energy.org/data/yearly-electricity-data/); course subset accessed 21 June 2026.</p></section><section class="cell"><pre class="code-cell"><code>import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv(&quot;data/FYS10XX_energy_data_2010_2024.csv&quot;)
+dictionary = pd.read_csv(&quot;data/FYS10XX_energy_data_dictionary.csv&quot;)
+
+columns_to_check = [
+    &quot;wind_share_elec&quot;,
+    &quot;solar_share_elec&quot;,
+    &quot;renewables_share_elec&quot;,
+    &quot;carbon_intensity_elec&quot;,
+    &quot;electricity_demand&quot;,
+]
+
+dictionary[
+    dictionary[&quot;column&quot;].isin(columns_to_check)
+][[&quot;column&quot;, &quot;description&quot;, &quot;unit&quot;, &quot;course_note&quot;]]
+</code></pre><pre class="output-cell">The dictionary confirms percent, gCO2/kWh and TWh units for the selected variables.
+</pre></section><section class="cell"><pre class="code-cell"><code>denmark = data[
+    (data[&quot;country&quot;] == &quot;Denmark&quot;)
+    &amp; (data[&quot;year&quot;].between(2010, 2024))
+].copy()
+
+denmark = denmark[
+    [
+        &quot;year&quot;,
+        &quot;wind_share_elec&quot;,
+        &quot;solar_share_elec&quot;,
+        &quot;renewables_share_elec&quot;,
+        &quot;carbon_intensity_elec&quot;,
+        &quot;electricity_demand&quot;,
+    ]
+].reset_index(drop=True)
+
+denmark
+</code></pre><pre class="output-cell">Filtered table: Denmark, 2010-2024, 15 annual rows.
+</pre></section><section class="cell markdown"><h2>First look at the data</h2>
+<table>
+<thead><tr>
+<th>year</th>
+<th>wind share (%)</th>
+<th>solar share (%)</th>
+<th>renewables share (%)</th>
+<th>carbon intensity (gCO2/kWh)</th>
+<th>electricity demand (TWh)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>2010</td>
+<td>20.2</td>
+<td>0.0</td>
+<td>32.1</td>
+<td>540.4</td>
+<td>37.6</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>49.1</td>
+<td>2.1</td>
+<td>65.8</td>
+<td>313.8</td>
+<td>34.7</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>57.1</td>
+<td>4.1</td>
+<td>82.1</td>
+<td>188.9</td>
+<td>35.5</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>58.2</td>
+<td>10.8</td>
+<td>89.2</td>
+<td>131.8</td>
+<td>38.8</td>
+</tr>
+</tbody>
+</table>
+<p>This table is my first check before plotting anything. It already suggests the main story: wind grows strongly, solar also appears, and the carbon intensity falls.</p></section><section class="cell"><pre class="code-cell"><code>first = denmark.iloc[0]
+last = denmark.iloc[-1]
+
+wind_change = last[&quot;wind_share_elec&quot;] - first[&quot;wind_share_elec&quot;]
+intensity_change = last[&quot;carbon_intensity_elec&quot;] - first[&quot;carbon_intensity_elec&quot;]
+demand_change = last[&quot;electricity_demand&quot;] - first[&quot;electricity_demand&quot;]
+
+# A rough operational emissions estimate.
+# TWh x gCO2/kWh / 1000 = MtCO2
+co2_2010_Mt = first[&quot;electricity_demand&quot;] * first[&quot;carbon_intensity_elec&quot;] / 1000
+co2_2024_Mt = last[&quot;electricity_demand&quot;] * last[&quot;carbon_intensity_elec&quot;] / 1000
+co2_drop_percent = (co2_2010_Mt - co2_2024_Mt) / co2_2010_Mt * 100
+
+print(f&quot;Wind share: {first[&#x27;wind_share_elec&#x27;]:.1f}% -&gt; {last[&#x27;wind_share_elec&#x27;]:.1f}%&quot;)
+print(f&quot;Change in wind share: {wind_change:.1f} percentage points&quot;)
+print(f&quot;Carbon intensity: {first[&#x27;carbon_intensity_elec&#x27;]:.1f} -&gt; {last[&#x27;carbon_intensity_elec&#x27;]:.1f} gCO2/kWh&quot;)
+print(f&quot;Change in carbon intensity: {intensity_change:.1f} gCO2/kWh&quot;)
+print(f&quot;Electricity demand: {first[&#x27;electricity_demand&#x27;]:.1f} -&gt; {last[&#x27;electricity_demand&#x27;]:.1f} TWh&quot;)
+print(f&quot;Estimated operational CO2: {co2_2010_Mt:.1f} -&gt; {co2_2024_Mt:.1f} MtCO2&quot;)
+print(f&quot;Estimated drop: {co2_drop_percent:.0f}%&quot;)
+</code></pre><pre class="output-cell">Wind share: 20.2% -&gt; 58.2% (change 38.1 percentage points)
+Carbon intensity: 540.4 -&gt; 131.8 gCO2/kWh (change -408.6 gCO2/kWh)
+Electricity demand: 37.6 -&gt; 38.8 TWh (change 1.2 TWh)
+Estimated operational electricity CO2: 20.3 -&gt; 5.1 MtCO2 (drop 75%)
+</pre></section><section class="cell markdown"><h2>Figure</h2>
+<p>The two quantities use different units, so I put them in two panels instead of forcing both lines onto one axis. That makes the graph a bit less flashy, but easier to read.</p></section><section class="cell"><pre class="code-cell"><code>fig, axes = plt.subplots(2, 1, figsize=(9, 6), sharex=True)
+
+axes[0].plot(denmark[&quot;year&quot;], denmark[&quot;wind_share_elec&quot;], marker=&quot;o&quot;)
+axes[0].set_ylabel(&quot;Wind share (%)&quot;)
+axes[0].set_title(&quot;Denmark: wind share of electricity generation&quot;)
+axes[0].grid(True, alpha=0.3)
+
+axes[1].plot(
+    denmark[&quot;year&quot;],
+    denmark[&quot;carbon_intensity_elec&quot;],
+    marker=&quot;o&quot;,
+    color=&quot;tab:red&quot;,
+)
+axes[1].set_ylabel(&quot;Carbon intensity (gCO2/kWh)&quot;)
+axes[1].set_xlabel(&quot;Year&quot;)
+axes[1].set_title(&quot;Denmark: electricity carbon intensity&quot;)
+axes[1].grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+
+print(
+    &quot;Source: Our World in Data Energy Data, based mainly on Ember Yearly &quot;
+    &quot;Electricity Data; course subset accessed 21 June 2026.&quot;
+)
+</code></pre><div class="svg-output"><svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540" role="img" aria-label="Denmark wind share and electricity carbon intensity from 2010 to 2024">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#172026}.small{font-size:13px;fill:#52606d}.axis{stroke:#52606d;stroke-width:1}.grid{stroke:#d7dde3;stroke-width:1}.wind{fill:none;stroke:#0f6d7a;stroke-width:3}.carbon{fill:none;stroke:#b44a2d;stroke-width:3}.dotw{fill:#0f6d7a}.dotc{fill:#b44a2d}</style>
+<text x="30" y="34" font-size="22" font-weight="700">Denmark: wind share rose while grid carbon intensity fell</text>
+<text x="30" y="58" class="small">Annual electricity data, 2010-2024</text>
+<line x1="92" y1="238" x2="888" y2="238" class="axis"/>
+<line x1="92" y1="88" x2="92" y2="238" class="axis"/>
+<line x1="92" y1="472" x2="888" y2="472" class="axis"/>
+<line x1="92" y1="322" x2="92" y2="472" class="axis"/>
+<text x="30" y="90" font-size="15" font-weight="700" fill="#0f6d7a">Wind share of electricity (%)</text>
+<text x="30" y="324" font-size="15" font-weight="700" fill="#b44a2d">Carbon intensity (gCO2/kWh)</text>
+<line x1="92" y1="238.0" x2="888" y2="238.0" class="grid"/>
+<text x="80" y="242.0" text-anchor="end" class="small">0</text>
+<line x1="92" y1="191.8" x2="888" y2="191.8" class="grid"/>
+<text x="80" y="195.8" text-anchor="end" class="small">20</text>
+<line x1="92" y1="145.7" x2="888" y2="145.7" class="grid"/>
+<text x="80" y="149.7" text-anchor="end" class="small">40</text>
+<line x1="92" y1="99.5" x2="888" y2="99.5" class="grid"/>
+<text x="80" y="103.5" text-anchor="end" class="small">60</text>
+<line x1="92" y1="472.0" x2="888" y2="472.0" class="grid"/>
+<text x="80" y="476.0" text-anchor="end" class="small">0</text>
+<line x1="92" y1="422.0" x2="888" y2="422.0" class="grid"/>
+<text x="80" y="426.0" text-anchor="end" class="small">200</text>
+<line x1="92" y1="372.0" x2="888" y2="372.0" class="grid"/>
+<text x="80" y="376.0" text-anchor="end" class="small">400</text>
+<line x1="92" y1="322.0" x2="888" y2="322.0" class="grid"/>
+<text x="80" y="326.0" text-anchor="end" class="small">600</text>
+<line x1="92.0" y1="238" x2="92.0" y2="244" class="axis"/>
+<line x1="92.0" y1="472" x2="92.0" y2="478" class="axis"/>
+<text x="92.0" y="500" text-anchor="middle" class="small">2010</text>
+<line x1="319.4" y1="238" x2="319.4" y2="244" class="axis"/>
+<line x1="319.4" y1="472" x2="319.4" y2="478" class="axis"/>
+<text x="319.4" y="500" text-anchor="middle" class="small">2014</text>
+<line x1="546.9" y1="238" x2="546.9" y2="244" class="axis"/>
+<line x1="546.9" y1="472" x2="546.9" y2="478" class="axis"/>
+<text x="546.9" y="500" text-anchor="middle" class="small">2018</text>
+<line x1="774.3" y1="238" x2="774.3" y2="244" class="axis"/>
+<line x1="774.3" y1="472" x2="774.3" y2="478" class="axis"/>
+<text x="774.3" y="500" text-anchor="middle" class="small">2022</text>
+<line x1="888.0" y1="238" x2="888.0" y2="244" class="axis"/>
+<line x1="888.0" y1="472" x2="888.0" y2="478" class="axis"/>
+<text x="888.0" y="500" text-anchor="middle" class="small">2024</text>
+<polyline points="92.0,191.5 148.9,173.8 205.7,160.5 262.6,163.9 319.4,143.8 376.3,124.7 433.1,141.0 490.0,127.6 546.9,131.8 603.7,111.1 660.6,106.1 717.4,125.5 774.3,113.2 831.1,106.0 888.0,103.7" class="wind"/>
+<polyline points="92.0,336.9 148.9,350.4 205.7,364.2 262.6,353.9 319.4,371.8 376.3,393.6 433.1,381.8 490.0,401.3 546.9,397.8 603.7,420.9 660.6,424.8 717.4,416.3 774.3,421.1 831.1,434.0 888.0,439.1" class="carbon"/>
+<circle cx="92.0" cy="191.5" r="3.3" class="dotw"/>
+<circle cx="148.9" cy="173.8" r="3.3" class="dotw"/>
+<circle cx="205.7" cy="160.5" r="3.3" class="dotw"/>
+<circle cx="262.6" cy="163.9" r="3.3" class="dotw"/>
+<circle cx="319.4" cy="143.8" r="3.3" class="dotw"/>
+<circle cx="376.3" cy="124.7" r="3.3" class="dotw"/>
+<circle cx="433.1" cy="141.0" r="3.3" class="dotw"/>
+<circle cx="490.0" cy="127.6" r="3.3" class="dotw"/>
+<circle cx="546.9" cy="131.8" r="3.3" class="dotw"/>
+<circle cx="603.7" cy="111.1" r="3.3" class="dotw"/>
+<circle cx="660.6" cy="106.1" r="3.3" class="dotw"/>
+<circle cx="717.4" cy="125.5" r="3.3" class="dotw"/>
+<circle cx="774.3" cy="113.2" r="3.3" class="dotw"/>
+<circle cx="831.1" cy="106.0" r="3.3" class="dotw"/>
+<circle cx="888.0" cy="103.7" r="3.3" class="dotw"/>
+<circle cx="92.0" cy="336.9" r="3.3" class="dotc"/>
+<circle cx="148.9" cy="350.4" r="3.3" class="dotc"/>
+<circle cx="205.7" cy="364.2" r="3.3" class="dotc"/>
+<circle cx="262.6" cy="353.9" r="3.3" class="dotc"/>
+<circle cx="319.4" cy="371.8" r="3.3" class="dotc"/>
+<circle cx="376.3" cy="393.6" r="3.3" class="dotc"/>
+<circle cx="433.1" cy="381.8" r="3.3" class="dotc"/>
+<circle cx="490.0" cy="401.3" r="3.3" class="dotc"/>
+<circle cx="546.9" cy="397.8" r="3.3" class="dotc"/>
+<circle cx="603.7" cy="420.9" r="3.3" class="dotc"/>
+<circle cx="660.6" cy="424.8" r="3.3" class="dotc"/>
+<circle cx="717.4" cy="416.3" r="3.3" class="dotc"/>
+<circle cx="774.3" cy="421.1" r="3.3" class="dotc"/>
+<circle cx="831.1" cy="434.0" r="3.3" class="dotc"/>
+<circle cx="888.0" cy="439.1" r="3.3" class="dotc"/>
+<text x="30" y="516" class="small">Source: Our World in Data Energy Data, based mainly on Ember Yearly Electricity Data; course subset accessed 21 June 2026.</text>
+</svg></div><pre class="output-cell">Source: Our World in Data Energy Data (https://ourworldindata.org/energy), with the electricity variables used here based mainly on Ember Yearly Electricity Data (https://ember-energy.org/data/yearly-electricity-data/); course subset accessed 21 June 2026.
+</pre></section><section class="cell markdown"><h2>Interpretation</h2>
+<p>The result is quite clear. Denmark&#x27;s wind share rose from <strong>20.2%</strong> in 2010 to <strong>58.2%</strong> in 2024, an increase of <strong>38.1 percentage points</strong>.</p>
+<p>Over the same period, the electricity carbon intensity fell from <strong>540.4 gCO2/kWh</strong> to <strong>131.8 gCO2/kWh</strong>, a decrease of <strong>408.6 gCO2/kWh</strong>.</p>
+<p>Electricity demand stayed almost flat in this dataset, moving from <strong>37.6 TWh</strong> to <strong>38.8 TWh</strong>. That matters because the carbon-intensity change is not being hidden by a huge demand increase.</p></section><section class="cell markdown"><h2>A small extra calculation</h2>
+<p>Using annual demand and carbon intensity as a rough operational estimate:</p>
+<p><code>CO2 = electricity demand x carbon intensity / 1000</code></p>
+<p>For 2010:</p>
+<p><code>37.6 TWh x 540.4 gCO2/kWh / 1000 = 20.3 MtCO2</code></p>
+<p>For 2024:</p>
+<p><code>38.8 TWh x 131.8 gCO2/kWh / 1000 = 5.1 MtCO2</code></p>
+<p>This simple estimate falls by about <strong>75%</strong>. I would not over-sell this as an exact emissions inventory, but it is a useful scale check.</p></section><section class="cell markdown"><h2>Limitations</h2>
+<p>This result is evidence of a strong change in Denmark&#x27;s electricity mix, but it is not proof that wind power alone caused the lower carbon intensity.</p>
+<p>The model leaves out:</p>
+<ul>
+<li>hourly variation in wind and demand;</li>
+<li>imports and exports of electricity;</li>
+<li>fossil fuel price changes and policy changes;</li>
+<li>changes in other renewable sources;</li>
+<li>curtailment, storage and transmission constraints;</li>
+<li>life-cycle emissions from building energy infrastructure.</li>
+</ul>
+<p>These limits are not just weaknesses. They are the boundary of this small essay, and they explain why my conclusion has to be careful.</p></section><section class="cell markdown"><h2>Conclusion</h2>
+<p>For Denmark in the course dataset, wind power became a much larger part of electricity generation between 2010 and 2024, while electricity carbon intensity fell sharply. My main claim is that Denmark&#x27;s electricity system became much cleaner over this period, and the data supports that claim.</p>
+<p>The careful version of the claim is:</p>
+<p>&gt; Denmark&#x27;s rising wind share appears together with a large decrease in electricity carbon intensity, but the dataset alone does not isolate wind as the only cause.</p>
+<p>This is the kind of claim I think fits a computational essay: it uses a numerical result, gives a physical interpretation, and draws a clear line around what the calculation can and cannot say.</p></section><section class="cell markdown"><h2>Comparison with strong computational essays</h2>
+<p>I compared this draft with stronger computational essays used in university physics courses. Mine is much smaller, but it follows the same basic logic.</p>
+<table>
+<thead><tr>
+<th>Feature</th>
+<th>Strong university examples</th>
+<th>This FYS10XX example</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Main question</td>
+<td>Starts from a focused, answerable question</td>
+<td>Asks whether Denmark&#x27;s wind growth appears together with cleaner electricity</td>
+</tr>
+<tr>
+<td>Role of code</td>
+<td>Code output drives the argument</td>
+<td>The table, calculation and figure support the claim</td>
+</tr>
+<tr>
+<td>Physics/model</td>
+<td>Often includes a simulation or derived model</td>
+<td>Uses energy-data accounting and a simple emissions estimate</td>
+</tr>
+<tr>
+<td>Assumptions</td>
+<td>States simplifying assumptions before interpreting results</td>
+<td>States national annual boundary and leaves out hourly balancing/imports</td>
+</tr>
+<tr>
+<td>Conclusion</td>
+<td>Gives a claim plus limits</td>
+<td>Says the grid became cleaner, but does not claim wind was the only cause</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="https://uio-ccse.github.io/computational-essay-showroom/">University of Oslo Computational Essay Showroom</a> is a good reference because it shows computational essays as real pieces of writing where code supports a thesis. Its example essays, such as the <a href="https://uio-ccse.github.io/computational-essay-showroom/essays/exampleessays/railgun_TOO/Railgun_V1_9.html">railgun-to-ISS essay</a>, are more open-ended and simulation-heavy than this course draft.</p>
+<p>This FYS10XX version is intentionally more modest. It uses one documented public dataset, one country, one time period and one main figure. That makes it realistic for a 5-credit introductory course while still copying the good university-course habits: question, boundary, method, code, evidence, interpretation and limitations.</p>
+<p>Two useful background readings on the method are <a href="https://arxiv.org/abs/1907.04896">Computational Essays in the Physics Classroom</a> and <a href="https://arxiv.org/abs/2006.10565">Using Computational Essays to Scaffold Professional Physics Practice</a>. The practical lesson from both is that the notebook should read like an argument, not like loose code cells.</p></section><section class="cell markdown"><h2>What I would improve next</h2>
+<p>If I had more time, I would change one thing at a time instead of making the project bigger in every direction:</p>
+<ul>
+<li>compare Denmark with Germany or Kenya;</li>
+<li>use solar share instead of wind share;</li>
+<li>examine carbon intensity and electricity demand together;</li>
+<li>focus on one period, such as 2015-2024;</li>
+</ul></section>
+  </main>
+</body>
+</html>
